@@ -31,6 +31,48 @@ def bajar_query(query):
                               'html.parser')
     return html_data
 
+def soup_to_dict(soup):
+
+    rows = soup.find('table').find_all('tr')
+    rows_with_data = [r.text.replace('\n', ' ').strip() for r in rows][13:-5]
+    data_por_radio_censal = rows_with_data[:-13]
+
+    resultados = {}
+    radio_censal = None
+    resultado_actual = {}
+    dimensiones = set()
+    for r in data_por_radio_censal:
+        if not len(r):
+            continue
+        cells = [i for i in r.split('  ') if len(i)]
+        key = cells[0]
+        if 'AREA #' in key:
+            if radio_censal is not None:
+                resultados[radio_censal] = resultado_actual
+                resultado_actual = {}
+            radio_censal = r.replace('AREA # ', '').split(' ')[0]
+        elif key == 'Tabla vacía':
+            resultado_actual['total'] = 0
+        elif len(cells) > 1:
+            d = cells[1].strip().split(' ')
+            try:
+                casos = int(d[0])
+            except ValueError:
+                continue
+            dimension = '_'.join(key.lower().split())
+            dimensiones.add(dimension)
+            resultado_actual[dimension] = casos
+        else:
+            continue
+    for k, v in resultados.items():
+        if len(v.keys()) < len(dimensiones):
+            for dim in dimensiones.difference(set(v.keys())):
+                v[dim] = 0
+                resultados[k] = v
+
+
+    return resultados
+
 
 def soup_to_dataframe(soup):
     df_data = {
