@@ -123,3 +123,16 @@ def soup_to_dataframe(soup):
 
     df = pd.DataFrame(columns=df_data.keys(), data=df_data)
     return df.pivot_table('casos', ['radio_cens'], 'tipo_vivienda')
+
+
+def redatam_dict_to_geojson(redatam_dict, geojson):
+    for feature in geojson['features']:
+        try:
+            metadata = redatam_dict[feature['properties']['link']]
+        except KeyError:
+            print("Radio censal no encontrado en REDATAM: {}".format(feature['properties']['link']))
+        metadata['link'] = feature['properties']['link']
+        feature['properties'] = metadata
+    return geojson
+
+
