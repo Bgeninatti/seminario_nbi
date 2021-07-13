@@ -9,7 +9,7 @@
           "type": "geojson",
           "config": {
             "dataId": "radios_censales",
-            "label": "radios_censales",
+            "label": "NBI II Arg",
             "color": [
               18,
               147,
@@ -18,9 +18,215 @@
             "columns": {
               "geojson": "_geojson"
             },
+            "isVisible": false,
+            "visConfig": {
+              "opacity": 0.05,
+              "strokeOpacity": 0.8,
+              "thickness": 0.5,
+              "strokeColor": [
+                112,
+                108,
+                99
+              ],
+              "colorRange": {
+                "name": "ColorBrewer RdYlGn-4",
+                "type": "diverging",
+                "category": "ColorBrewer",
+                "colors": [
+                  "#1a9641",
+                  "#a6d96a",
+                  "#fdae61",
+                  "#d7191c"
+                ],
+                "reversed": true
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
+                ]
+              },
+              "radius": 10,
+              "sizeRange": [
+                0,
+                10
+              ],
+              "radiusRange": [
+                0,
+                50
+              ],
+              "heightRange": [
+                0,
+                500
+              ],
+              "elevationScale": 5,
+              "stroked": true,
+              "filled": true,
+              "enable3d": false,
+              "wireframe": false
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "hogares_nbi_ii_ar",
+              "type": "integer"
+            },
+            "colorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "heightField": null,
+            "heightScale": "linear",
+            "radiusField": null,
+            "radiusScale": "linear"
+          }
+        },
+        {
+          "id": "qo5wodd",
+          "type": "geojson",
+          "config": {
+            "dataId": "radios_censales",
+            "label": "NBI II Uy",
+            "color": [
+              18,
+              92,
+              119
+            ],
+            "columns": {
+              "geojson": "_geojson"
+            },
+            "isVisible": false,
+            "visConfig": {
+              "opacity": 0.05,
+              "strokeOpacity": 0.8,
+              "thickness": 0.5,
+              "strokeColor": [
+                112,
+                108,
+                99
+              ],
+              "colorRange": {
+                "name": "ColorBrewer RdYlGn-4",
+                "type": "diverging",
+                "category": "ColorBrewer",
+                "colors": [
+                  "#1a9641",
+                  "#a6d96a",
+                  "#fdae61",
+                  "#d7191c"
+                ],
+                "reversed": true
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
+                ]
+              },
+              "radius": 10,
+              "sizeRange": [
+                0,
+                10
+              ],
+              "radiusRange": [
+                0,
+                50
+              ],
+              "heightRange": [
+                0,
+                500
+              ],
+              "elevationScale": 5,
+              "stroked": true,
+              "filled": true,
+              "enable3d": false,
+              "wireframe": false
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "hogares_nbi_ii_uy",
+              "type": "integer"
+            },
+            "colorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "heightField": null,
+            "heightScale": "linear",
+            "radiusField": null,
+            "radiusScale": "linear"
+          }
+        },
+        {
+          "id": "z910bcl",
+          "type": "geojson",
+          "config": {
+            "dataId": "radios_censales",
+            "label": "NBI II Arg %",
+            "color": [
+              23,
+              184,
+              190
+            ],
+            "columns": {
+              "geojson": "_geojson"
+            },
             "isVisible": true,
             "visConfig": {
-              "opacity": 0.2,
+              "opacity": 0.05,
               "strokeOpacity": 0.8,
               "thickness": 0.5,
               "strokeColor": [
@@ -99,7 +305,116 @@
           },
           "visualChannels": {
             "colorField": {
-              "name": "nbi_ii_%",
+              "name": "hogares_nbi_ii_ar_%",
+              "type": "real"
+            },
+            "colorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "heightField": null,
+            "heightScale": "linear",
+            "radiusField": null,
+            "radiusScale": "linear"
+          }
+        },
+        {
+          "id": "ddzgn55",
+          "type": "geojson",
+          "config": {
+            "dataId": "radios_censales",
+            "label": "NBI II Uy %",
+            "color": [
+              255,
+              153,
+              31
+            ],
+            "columns": {
+              "geojson": "_geojson"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.05,
+              "strokeOpacity": 0.8,
+              "thickness": 0.5,
+              "strokeColor": [
+                112,
+                108,
+                99
+              ],
+              "colorRange": {
+                "name": "ColorBrewer RdYlGn-10",
+                "type": "diverging",
+                "category": "ColorBrewer",
+                "colors": [
+                  "#006837",
+                  "#1a9850",
+                  "#66bd63",
+                  "#a6d96a",
+                  "#d9ef8b",
+                  "#fee08b",
+                  "#fdae61",
+                  "#f46d43",
+                  "#d73027",
+                  "#a50026"
+                ],
+                "reversed": true
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
+                ]
+              },
+              "radius": 10,
+              "sizeRange": [
+                0,
+                10
+              ],
+              "radiusRange": [
+                0,
+                50
+              ],
+              "heightRange": [
+                0,
+                500
+              ],
+              "elevationScale": 5,
+              "stroked": true,
+              "filled": true,
+              "enable3d": false,
+              "wireframe": false
+            },
+            "hidden": false,
+            "textLabel": [
+              {
+                "field": null,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "hogares_nbi_ii_uy_%",
               "type": "real"
             },
             "colorScale": "quantile",
@@ -123,15 +438,19 @@
                 "format": null
               },
               {
-                "name": "hogares_nbi_ii",
+                "name": "hogares_nbi_ii_ar",
                 "format": null
               },
               {
-                "name": "nbi_ii_%",
+                "name": "hogares_nbi_ii_uy",
                 "format": null
               },
               {
-                "name": "link",
+                "name": "hogares_nbi_ii_ar_%",
+                "format": null
+              },
+              {
+                "name": "hogares_nbi_ii_uy_%",
                 "format": null
               }
             ]
@@ -152,7 +471,20 @@
         }
       },
       "layerBlending": "normal",
-      "splitMaps": [],
+      "splitMaps": [
+        {
+          "layers": {
+            "z910bcl": true,
+            "ddzgn55": false
+          }
+        },
+        {
+          "layers": {
+            "z910bcl": false,
+            "ddzgn55": true
+          }
+        }
+      ],
       "animationConfig": {
         "currentTime": null,
         "speed": 1
@@ -161,11 +493,11 @@
     "mapState": {
       "bearing": 0,
       "dragRotate": false,
-      "latitude": -33.02154106666272,
-      "longitude": -60.678337701846466,
+      "latitude": -32.98134595244288,
+      "longitude": -60.62524001853172,
       "pitch": 0,
-      "zoom": 11.120917608830492,
-      "isSplit": false
+      "zoom": 10.959249222212604,
+      "isSplit": true
     },
     "mapStyle": {
       "styleType": "light",
